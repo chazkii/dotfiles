@@ -1,0 +1,20 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_keymap.cson:
+    src: Library/Application Support/inkdrop/keymap.cson
+    dst: ~/Library/Application Support/inkdrop/keymap.cson
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  d_alacritty:
+    src: config/alacritty
+    dst: ~/.config/alacritty
+profiles:
+  charlies-mbp.mynet:
+    dotfiles:
+    - f_keymap.cson
+    - d_nvim
+    - d_alacritty

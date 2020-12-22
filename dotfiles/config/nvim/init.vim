@@ -1,0 +1,2 @@
+inoremap kj <Esc>
+
