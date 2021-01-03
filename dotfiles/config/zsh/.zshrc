@@ -1,24 +1,3 @@
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/csmith/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/csmith/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/csmith/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/csmith/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # https://thevaluable.dev/zsh-install-configure/
@@ -65,13 +44,12 @@ cursor_mode() {
 
 cursor_mode
 
-# Mac only
-alias ls='ls -G'
-alias ll='ls -lG'
-
 # Bash completion (do not autofill characters when pressing tab)
 setopt noautomenu
 setopt nomenucomplete
 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source $ZDOTDIR/homemac.zshrc
+source $ZDOTDIR/manahl.zshrc
