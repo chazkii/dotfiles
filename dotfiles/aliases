@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# git
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gpo='git push origin'
+alias gtd='git tag --delete'
+alias gtdr='git tag --delete origin'
+alias gr='git branch -r'                                                                           # display remote branch
+alias gplo='git pull origin'
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gl='git log'
+alias gr='git remote'
+alias grs='git remote show'
+alias glo='git log --pretty="oneline"'
+alias glol='git log --graph --oneline --decorate'
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # Delete local branch merged with master
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                              # git log for each branches
+alias gsub="git submodule update --remote"                                                        # pull submodules
+
+# make it feel like work
+alias workon='pyenv activate'
+alias pyinstall='pip install'

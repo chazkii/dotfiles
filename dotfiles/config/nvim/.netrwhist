@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/csmith/dotfiles/.git'
+let g:netrw_dirhist_6='/Users/csmith/.config/alacritty'
+let g:netrw_dirhist_5='/Users/csmith/.config'
+let g:netrw_dirhist_4='/Users/csmith/.config/alacritty'
+let g:netrw_dirhist_3='/Users/csmith/.config'
 let g:netrw_dirhist_2='/Users/csmith/dotfiles/dotdrop'
 let g:netrw_dirhist_1='/Users/csmith/.config/nvim'

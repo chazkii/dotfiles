@@ -12,9 +12,34 @@ dotfiles:
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
+  f_editorconfig:
+    src: editorconfig
+    dst: ~/.editorconfig
+  d_zsh:
+    src: config/zsh
+    dst: ~/.config/zsh
+    instignore:
+      - ".zsh_history"
+      - ".zcompdump"
+    cmpignore:
+      - ".zsh_history"
+      - ".zcompdump"
+    upignore:
+      - ".zsh_history"
+      - ".zcompdump"
+  f_zshenv:
+    src: zshenv
+    dst: ~/.zshenv
+  f_ideavimrc:
+    src: ideavimrc
+    dst: ~/.ideavimrc
 profiles:
   charlies-mbp.mynet:
     dotfiles:
     - f_keymap.cson
     - d_nvim
     - d_alacritty
+    - f_editorconfig
+    - d_zsh
+    - f_zshenv
+    - f_ideavimrc
