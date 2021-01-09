@@ -1,0 +1,21 @@
+{
+    "window.zoomLevel": 1,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Hack Nerd Font, Monaco, 'Courier New', monospace",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "julia.executablePath": "/usr/local/bin/julia",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.enableTelemetry": true,
+    "[julia]": {
+
+        "editor.quickSuggestions": true
+    },
+    "julia.execution.codeInREPL": true,
+    "vim.vimrc.enable": true,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative"
+}

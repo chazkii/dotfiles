@@ -4,7 +4,7 @@ config:
   dotpath: dotfiles
 dotfiles:
   f_keymap.cson:
-    src: Library/Application Support/inkdrop/keymap.cson
+    src: macos/inkdrop/keymap.cson
     dst: ~/Library/Application Support/inkdrop/keymap.cson
   d_nvim:
     src: config/nvim
@@ -19,22 +19,28 @@ dotfiles:
     src: config/zsh
     dst: ~/.config/zsh
     instignore:
-      - ".zsh_history"
-      - ".zcompdump"
+    - .zsh_history
+    - .zcompdump
     cmpignore:
-      - ".zsh_history"
-      - ".zcompdump"
+    - .zsh_history
+    - .zcompdump
     upignore:
-      - ".zsh_history"
-      - ".zcompdump"
+    - .zsh_history
+    - .zcompdump
   f_zshenv:
     src: zshenv
     dst: ~/.zshenv
   f_ideavimrc:
     src: ideavimrc
     dst: ~/.ideavimrc
+  f_taskrc:
+    src: taskrc
+    dst: ~/.taskrc
+  f_vsc_mac:
+    src: Code/User/settings.json
+    dst: ~/Library/Application Support/Code/User/settings.json
 profiles:
-  charlies-mbp.mynet:
+  Charlies-MacBook-Pro.local:
     dotfiles:
     - f_keymap.cson
     - d_nvim
@@ -43,3 +49,5 @@ profiles:
     - d_zsh
     - f_zshenv
     - f_ideavimrc
+    - f_taskrc
+    - f_vsc_mac
