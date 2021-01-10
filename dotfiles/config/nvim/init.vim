@@ -18,6 +18,7 @@ Plug 'vim-syntastic/syntastic'
 " ecosystem
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'jpalardy/vim-slime'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -52,15 +53,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -200,3 +192,16 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " END recommend coc.nvim config
 
 let g:airline_powerline_fonts = 1
+
+" Use builtin netrw instead of NERDTree
+" https://shapeshed.com/vim-netrw/
+" Hide useless help banner
+let g:netrw_banner = 0
+" Open in a new vertical split
+let g:netrw_browse_split = 1
+" Set width to 20%
+let g:netrw_winsize = 20
+
+" vim-slime
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
