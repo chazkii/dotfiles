@@ -18,3 +18,5 @@ export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000
 
 export ALIASES="$HOME/dotfiles/dotfiles/aliases"
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/csmith/work/rust/examples/ripgrep/grep/src'
+let g:netrw_dirhist_9='/Users/csmith/work/rust/examples/ripgrep/grep'
+let g:netrw_dirhist_8='/Users/csmith'
 let g:netrw_dirhist_7='/Users/csmith/dotfiles/.git'
 let g:netrw_dirhist_6='/Users/csmith/.config/alacritty'
 let g:netrw_dirhist_5='/Users/csmith/.config'

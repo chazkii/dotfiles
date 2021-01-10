@@ -29,3 +29,6 @@ data.location=~/Tresors/Tresorit/Documents/02-Areas/Meta/taskwarrior
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
 
+uda.area.type=string
+uda.area.label=String
+uda.area.values=community,dailies,diaries,entrepreneurship,family,finances,food,friends,health,home,languages,manahl,meta,mission,motorcycling,photography,possessions,records,sd,spouse
