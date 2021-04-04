@@ -19,12 +19,15 @@ dotfiles:
     src: config/zsh
     dst: ~/.config/zsh
     instignore:
+    - .zhistory
     - .zsh_history
     - .zcompdump
     cmpignore:
+    - .zhistory
     - .zsh_history
     - .zcompdump
     upignore:
+    - .zhistory
     - .zsh_history
     - .zcompdump
   f_zshenv:

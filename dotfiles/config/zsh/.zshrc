@@ -52,4 +52,3 @@ setopt nomenucomplete
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZDOTDIR/homemac.zshrc
-source $ZDOTDIR/manahl.zshrc

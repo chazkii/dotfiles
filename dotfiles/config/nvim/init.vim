@@ -17,7 +17,8 @@ Plug 'vim-syntastic/syntastic'
 " We use coc.nvim over vim.lsp and others because coc.nvim leverages VSCode
 " ecosystem
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'fannheyward/coc-julia'
 Plug 'jpalardy/vim-slime'
 
 " Themes
@@ -25,9 +26,11 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'rust-lang/rust.vim'
 
+Plug 'elixir-editors/vim-elixir'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -37,6 +40,11 @@ colorscheme nord
 let g:rustfmt_autosave = 1
 
 " START recommend coc.nvim config
+
+" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
+" unicode characters in the file autoload/float.vim
+set encoding=utf-8
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -53,6 +61,15 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
