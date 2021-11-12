@@ -1,11 +1,6 @@
-[user]
-	name = Charlie Smith
-	email = charlie@chuckus.nz
+# templated in dotfiles! please change dotfiles/dotfiles/gitconfig
 [include]
-	path = /Users/csmith/.gitconfig.local
-[dotfiles]
-	managed = true
-	lastupdate = 202002252000
+	path = {{@@ home @@}}/.gitconfig.local
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

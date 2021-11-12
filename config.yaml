@@ -9,7 +9,11 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
-    ignore:
+    instignore:
+    - .netrwhist
+    cmpignore:
+    - .netrwhist
+    upignore:
     - .netrwhist
   d_alacritty:
     src: config/alacritty
@@ -56,6 +60,9 @@ dotfiles:
   f_home_gitconfig.local:
     src: home/gitconfig.local
     dst: ~/.gitconfig.local
+  f_mangroup_gitconfig.local:
+    src: mangroup/gitconfig.local
+    dst: ~/.gitconfig.local
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -71,3 +78,15 @@ profiles:
     - f_tmux.conf
     - f_gitconfig
     - f_home_gitconfig.local
+  ManGroupWindowsLaptop:
+    dotfiles:
+    - f_gitconfig
+    - f_mangroup_gitconfig.local
+    - f_ideavimrc
+  ManGroupLinuxHeadnode:
+    dotfiles:
+    - f_gitconfig
+    - f_mangroup_gitconfig.local
+dynvariables:
+  home: "echo $HOME"
+
