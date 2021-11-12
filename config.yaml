@@ -3,12 +3,14 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  f_keymap.cson:
+  f_macos_inkdrop_keymap.cson:
     src: macos/inkdrop/keymap.cson
     dst: ~/Library/Application Support/inkdrop/keymap.cson
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
+    ignore:
+    - .netrwhist
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -21,14 +23,17 @@ dotfiles:
     instignore:
     - .zhistory
     - .zsh_history
+    - .zsh_sessions
     - .zcompdump
     cmpignore:
     - .zhistory
     - .zsh_history
+    - .zsh_sessions
     - .zcompdump
     upignore:
     - .zhistory
     - .zsh_history
+    - .zsh_sessions
     - .zcompdump
   f_zshenv:
     src: zshenv
@@ -39,16 +44,22 @@ dotfiles:
   f_taskrc:
     src: taskrc
     dst: ~/.taskrc
-  f_vsc_mac:
-    src: Code/User/settings.json
+  f_macos_vsc:
+    src: macos/Code/User/settings.json
     dst: ~/Library/Application Support/Code/User/settings.json
   f_tmux.conf:
     src: config/tmux/tmux.conf
     dst: ~/.config/tmux/tmux.conf
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_home_gitconfig.local:
+    src: home/gitconfig.local
+    dst: ~/.gitconfig.local
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
-    - f_keymap.cson
+    - f_macos_inkdrop_keymap.cson
     - d_nvim
     - d_alacritty
     - f_editorconfig
@@ -56,5 +67,7 @@ profiles:
     - f_zshenv
     - f_ideavimrc
     - f_taskrc
-    - f_vsc_mac
+    - f_macos_vsc
     - f_tmux.conf
+    - f_gitconfig
+    - f_home_gitconfig.local

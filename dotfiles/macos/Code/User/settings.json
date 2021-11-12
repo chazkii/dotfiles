@@ -17,5 +17,13 @@
     "julia.execution.codeInREPL": true,
     "vim.vimrc.enable": true,
     "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Nord",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
 }

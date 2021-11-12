@@ -1,0 +1,28 @@
+[user]
+	name = Charlie Smith
+	email = charlie@chuckus.nz
+[include]
+	path = /Users/csmith/.gitconfig.local
+[dotfiles]
+	managed = true
+	lastupdate = 202002252000
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[color]
+	ui = auto
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	st = status -sb
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -m
+	cam = commit --amend
+	co = checkout
+[help]
+	autocorrect = 20

@@ -52,3 +52,5 @@ setopt nomenucomplete
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZDOTDIR/homemac.zshrc
+
+export PATH="$HOME/.poetry/bin:$PATH"
