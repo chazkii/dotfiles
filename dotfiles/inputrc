@@ -1,0 +1,20 @@
+# MANAGED BY DOTDROP - see ~/dotfiles
+# readline configuration
+# want vi to be the default editor for readline                      
+set editing-mode vi                                            
+
+# vi mode
+# not great, can use k and j to browse through history
+# using numbers to move characters doesn't appear to work
+
+# cursor indication of vi mode
+set show-mode-in-prompt on
+set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\1\e[6 q\2"
+
+# vi settings                                         
+$if mode=vi                
+    # insert mode             
+    set keymap vi-insert                          
+    "kj": vi-movement-mode # remap escape   
+$endif 

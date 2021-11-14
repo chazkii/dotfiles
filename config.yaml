@@ -63,6 +63,9 @@ dotfiles:
   f_mangroup_gitconfig.local:
     src: mangroup/gitconfig.local
     dst: ~/.gitconfig.local
+  f_inputrc:
+    src: inputrc
+    dst: ~/.inputrc
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -78,15 +81,17 @@ profiles:
     - f_tmux.conf
     - f_gitconfig
     - f_home_gitconfig.local
+    - f_inputrc
   ManGroupWindowsLaptop:
     dotfiles:
     - f_gitconfig
     - f_mangroup_gitconfig.local
     - f_ideavimrc
+    - f_inputrc
   ManGroupLinuxHeadnode:
     dotfiles:
     - f_gitconfig
     - f_mangroup_gitconfig.local
+    - f_inputrc
 dynvariables:
-  home: "echo $HOME"
-
+  home: echo $HOME
