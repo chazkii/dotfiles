@@ -10,11 +10,11 @@ dotfiles:
     src: config/nvim
     dst: ~/.config/nvim
     instignore:
-    - .netrwhist
+      - .netrwhist
     cmpignore:
-    - .netrwhist
+      - .netrwhist
     upignore:
-    - .netrwhist
+      - .netrwhist
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -25,20 +25,20 @@ dotfiles:
     src: config/zsh
     dst: ~/.config/zsh
     instignore:
-    - .zhistory
-    - .zsh_history
-    - .zsh_sessions
-    - .zcompdump
+      - .zhistory
+      - .zsh_history
+      - .zsh_sessions
+      - .zcompdump
     cmpignore:
-    - .zhistory
-    - .zsh_history
-    - .zsh_sessions
-    - .zcompdump
+      - .zhistory
+      - .zsh_history
+      - .zsh_sessions
+      - .zcompdump
     upignore:
-    - .zhistory
-    - .zsh_history
-    - .zsh_sessions
-    - .zcompdump
+      - .zhistory
+      - .zsh_history
+      - .zsh_sessions
+      - .zcompdump
   f_zshenv:
     src: zshenv
     dst: ~/.zshenv
@@ -66,32 +66,48 @@ dotfiles:
   f_inputrc:
     src: inputrc
     dst: ~/.inputrc
+  d_ipython_profile_default:
+    src: ipython/profile_default/startup
+    dst: ~/.ipython/profile_default/startup
+    instignore:
+      - 00-private-setup.py
+      - 99-private-setup.py
+    cmpignore:
+      - 00-private-setup.py
+      - 99-private-setup.py
+    upignore:
+      - 00-private-setup.py
+      - 99-private-setup.py
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
-    - f_macos_inkdrop_keymap.cson
-    - d_nvim
-    - d_alacritty
-    - f_editorconfig
-    - d_zsh
-    - f_zshenv
-    - f_ideavimrc
-    - f_taskrc
-    - f_macos_vsc
-    - f_tmux.conf
-    - f_gitconfig
-    - f_home_gitconfig.local
-    - f_inputrc
+      - f_macos_inkdrop_keymap.cson
+      - d_nvim
+      - d_alacritty
+      - f_editorconfig
+      - d_zsh
+      - f_zshenv
+      - f_ideavimrc
+      - f_taskrc
+      - f_macos_vsc
+      - f_tmux.conf
+      - f_gitconfig
+      - f_home_gitconfig.local
+      - f_inputrc
+      - d_ipython_profile_default_startup
   ManGroupWindowsLaptop:
     dotfiles:
-    - f_gitconfig
-    - f_mangroup_gitconfig.local
-    - f_ideavimrc
-    - f_inputrc
+      - f_gitconfig
+      - f_mangroup_gitconfig.local
+      - f_ideavimrc
+      - f_inputrc
+      - d_ipython_profile_default_startup
   ManGroupLinuxHeadnode:
     dotfiles:
-    - f_gitconfig
-    - f_mangroup_gitconfig.local
-    - f_inputrc
+      - f_gitconfig
+      - f_mangroup_gitconfig.local
+      - f_inputrc
+      - d_nvim
+      - d_ipython_profile_default_startup
 dynvariables:
   home: echo $HOME

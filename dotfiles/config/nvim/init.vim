@@ -6,6 +6,9 @@ inoremap kj <Esc>
 syntax enable
 filetype plugin indent on
 
+" https://github.com/dense-analysis/ale/blob/de67f4743d9ffd1694d15b1b91fedfaa0a5cda70/README.md?plain=1#L452
+let g:ale_disable_lsp = 1
+
 :set number relativenumber
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'editorconfig/editorconfig-vim'
@@ -13,12 +16,20 @@ Plug 'lighttiger2505/sqls.vim'
 
 Plug 'vim-syntastic/syntastic'
 
+" Auto-completion engine (alternative to omnicomplete)
+" Disabled as conflicts big-time with coc
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Alternative to deoplete that we should migrate to once it has feature-parity
+" with deoplete
+" Plug 'Shougo/ddc.vim'
+" Plug 'vim-denops/denops.vim'
+
 
 " LSP system 1
 " We use coc.nvim over vim.lsp and others because coc.nvim leverages VSCode
 " ecosystem
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+" Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'fannheyward/coc-julia'
 
 " LSP system 2
@@ -37,7 +48,15 @@ Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'rust-lang/rust.vim'
 
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
+
+" Line engine
+Plug 'dense-analysis/ale'
+" Microsoft open source linting
+Plug 'fannheyward/coc-pyright'
+" Python 3 syntax higlighting
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+Plug 'bfredl/nvim-ipy'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -77,6 +96,15 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
+
+" https://github.com/dense-analysis/ale/blob/de67f4743d9ffd1694d15b1b91fedfaa0a5cda70/README.md?plain=1#L452
+let g:ale_disable_lsp = 1
+
+
+" Disabled as conflicts big-time with coc
+" let g:deoplete#enable_at_startup = 1
+" https://github.com/numirias/semshi/blob/252f07fd5f0ae9eb19d02bae979fd7c9152c1ccf/README.md?plain=1#L181
+" call deoplete#custom#option('auto_complete_delay', 100)
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
