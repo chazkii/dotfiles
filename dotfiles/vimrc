@@ -1,0 +1,17 @@
+" MANAGED BY DOTDROP - ./dotdrop.sh update to copy from dotfiles, ./dotdrop.sh
+" import to copy from home folder
+" keep in sync with .config/nvim/init.vim
+inoremap kj <Esc>
+set number relativenumber
+syntax enable
+filetype plugin indent on
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-surround'
+" Themes
+Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+colorscheme nord
+let g:airline_powerline_fonts = 1

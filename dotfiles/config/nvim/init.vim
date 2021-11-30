@@ -1,3 +1,5 @@
+" MANAGED BY DOTDROP - ./dotdrop.sh update to copy from dotfiles, ./dotdrop.sh
+" import to copy from home folder
 " keybindings beigin
 " keep in sync with .ideavimrc
 inoremap kj <Esc>
@@ -60,6 +62,8 @@ Plug 'bfredl/nvim-ipy'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'tpope/vim-surround'
 call plug#end()
 
 colorscheme nord

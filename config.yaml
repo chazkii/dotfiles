@@ -78,6 +78,9 @@ dotfiles:
     upignore:
       - 00-private-setup.py
       - 99-private-setup.py
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -95,6 +98,7 @@ profiles:
       - f_home_gitconfig.local
       - f_inputrc
       - d_ipython_profile_default_startup
+      - f_vimrc
   ManGroupWindowsLaptop:
     dotfiles:
       - f_gitconfig
@@ -102,6 +106,7 @@ profiles:
       - f_ideavimrc
       - f_inputrc
       - d_ipython_profile_default_startup
+      - f_vimrc
   ManGroupLinuxHeadnode:
     dotfiles:
       - f_gitconfig
@@ -109,5 +114,6 @@ profiles:
       - f_inputrc
       - d_nvim
       - d_ipython_profile_default_startup
+      - f_vimrc
 dynvariables:
   home: echo $HOME
