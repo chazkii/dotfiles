@@ -81,6 +81,9 @@ dotfiles:
   f_vimrc:
     src: vimrc
     dst: ~/.vimrc
+  f_mangroup_wsl_bashrc:
+    src: mangroup/wsl/bashrc
+    dst: ~/.bashrc
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -107,6 +110,18 @@ profiles:
       - f_inputrc
       - d_ipython_profile_default_startup
       - f_vimrc
+  ManGroupWSLLaptop:
+    dotfiles:
+      - d_nvim
+      - f_editorconfig
+      - f_ideavimrc
+      - f_inputrc
+      - d_ipython_profile_default_startup
+      - f_gitconfig
+      - f_mangroup_gitconfig.local
+      - f_tmux.conf
+      - f_vimrc
+      - f_mangroup_wsl_bashrc
   ManGroupLinuxHeadnode:
     dotfiles:
       - f_gitconfig
