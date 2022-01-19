@@ -1,5 +1,4 @@
-" MANAGED BY DOTDROP - ./dotdrop.sh update to copy from dotfiles, ./dotdrop.sh
-" import to copy from home folder
+" MANAGED BY DOTDROP - edit here, cd dotdrop, ./dotdrop.sh update
 " keep in sync with .config/nvim/init.vim
 inoremap kj <Esc>
 set number relativenumber

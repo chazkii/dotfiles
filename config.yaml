@@ -84,6 +84,16 @@ dotfiles:
   f_mangroup_wsl_bashrc:
     src: mangroup/wsl/bashrc
     dst: ~/.bashrc
+  d_karabiner:
+    src: config/karabiner
+    dst: ~/.config/karabiner
+    chmod: '700'
+    instignore:
+    - automatic_backups
+    cmpignore:
+    - automatic_backups
+    upignore:
+    - automatic_backups
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -102,6 +112,25 @@ profiles:
       - f_inputrc
       - d_ipython_profile_default_startup
       - f_vimrc
+      - d_karabiner
+  Charlies-MacBook-Pro-2.local:
+    dotfiles:
+      - f_macos_inkdrop_keymap.cson
+      - d_nvim
+      - d_alacritty
+      - f_editorconfig
+      - d_zsh
+      - f_zshenv
+      - f_ideavimrc
+      - f_taskrc
+      - f_macos_vsc
+      - f_tmux.conf
+      - f_gitconfig
+      - f_home_gitconfig.local
+      - f_inputrc
+      - d_ipython_profile_default_startup
+      - f_vimrc
+      - d_karabiner
   ManGroupWindowsLaptop:
     dotfiles:
       - f_gitconfig
