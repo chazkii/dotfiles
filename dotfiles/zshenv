@@ -20,3 +20,4 @@ export SAVEHIST=10000
 export ALIASES="$HOME/dotfiles/dotfiles/aliases"
 
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+. "$HOME/.cargo/env"
