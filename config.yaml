@@ -94,6 +94,9 @@ dotfiles:
     - automatic_backups
     upignore:
     - automatic_backups
+  f_mangroup_vscode:
+    src: vscode/settings.json
+    dst: "/mnt/c/Users/{{@@ user @@}}/AppData/Roaming/Code/User/settings.json"
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
@@ -113,32 +116,7 @@ profiles:
     - d_ipython_profile_default_startup
     - f_vimrc
     - d_karabiner
-  Charlies-MacBook-Pro-2.local:
-    dotfiles:
-    - f_macos_inkdrop_keymap.cson
-    - d_nvim
-    - d_alacritty
-    - f_editorconfig
-    - d_zsh
-    - f_zshenv
-    - f_ideavimrc
-    - f_taskrc
-    - f_macos_vsc
-    - f_tmux.conf
-    - f_gitconfig
-    - f_home_gitconfig.local
-    - f_inputrc
-    - d_ipython_profile_default_startup
-    - f_vimrc
-    - d_karabiner
-  ManGroupWindowsLaptop:
-    dotfiles:
-    - f_gitconfig
-    - f_mangroup_gitconfig.local
-    - f_ideavimrc
-    - f_inputrc
-    - d_ipython_profile_default_startup
-    - f_vimrc
+  # TODO: Figure out how to update MinGW config via WSL mounts
   ManGroupWSLLaptop:
     dotfiles:
     - d_nvim
@@ -151,6 +129,7 @@ profiles:
     - f_tmux.conf
     - f_vimrc
     - f_mangroup_wsl_bashrc
+    - f_mangroup_vscode
   ManGroupLinuxHeadnode:
     dotfiles:
     - f_gitconfig
@@ -161,3 +140,4 @@ profiles:
     - f_vimrc
 dynvariables:
   home: echo $HOME
+  user: echo $USER

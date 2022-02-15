@@ -1,0 +1,19 @@
+{
+    "editor.tabSize": 4,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "files.autoSave": "onFocusChange",
+    "vim.vimrc.path": "$HOME/.ideavimrc",
+    "foam.decorations.links.enable": true,
+    "foam.openDailyNote.onStartup": true,
+    "vim.vimrc.enable": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["k", "j"],
+        "after": ["<Esc>"]
+      }
+    ]
+}
