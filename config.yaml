@@ -96,9 +96,12 @@ dotfiles:
     - automatic_backups
   f_mangroup_vscode:
     src: vscode/settings.json
-    dst: "/mnt/c/Users/{{@@ user @@}}/AppData/Roaming/Code/User/settings.json"
+    dst: /mnt/c/Users/{{@@ user @@}}/AppData/Roaming/Code/User/settings.json
+  f_condarc:
+    src: condarc
+    dst: ~/.condarc
 profiles:
-  Charlies-MacBook-Pro.local:
+  Charlies-MacBook-Pro-2.local:
     dotfiles:
     - f_macos_inkdrop_keymap.cson
     - d_nvim
@@ -116,6 +119,7 @@ profiles:
     - d_ipython_profile_default_startup
     - f_vimrc
     - d_karabiner
+    - f_condarc
   # TODO: Figure out how to update MinGW config via WSL mounts
   ManGroupWSLLaptop:
     dotfiles:
