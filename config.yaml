@@ -100,8 +100,11 @@ dotfiles:
   f_condarc:
     src: condarc
     dst: ~/.condarc
+  f_ssh_config:
+    src: ssh/config
+    dst: ~/.ssh/config
 profiles:
-  Charlies-MacBook-Pro-2.local:
+  Charlies-MacBook-Pro.local:
     dotfiles:
     - f_macos_inkdrop_keymap.cson
     - d_nvim
@@ -120,6 +123,7 @@ profiles:
     - f_vimrc
     - d_karabiner
     - f_condarc
+    - f_ssh_config
   # TODO: Figure out how to update MinGW config via WSL mounts
   ManGroupWSLLaptop:
     dotfiles:

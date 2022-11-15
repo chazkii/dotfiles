@@ -1,0 +1,8 @@
+Host bikerbnb
+	HostName 167.172.57.173
+	User root
+	IdentityFile /Users/csmith/work/bikerbnb/bikerbnb.key
+Host bikerbnb-build
+	HostName 167.172.51.153
+	User root
+	IdentityFile /Users/csmith/work/bikerbnb/bikerbnb.key

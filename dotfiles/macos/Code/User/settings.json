@@ -5,14 +5,18 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "julia.executablePath": "/usr/local/bin/julia",
+    "julia.executablePath": "/Applications/Julia-1.7.app/Contents/Resources/julia/bin//julia",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
     "julia.enableTelemetry": true,
     "[julia]": {
 
-        "editor.quickSuggestions": true
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
     },
     "julia.execution.codeInREPL": true,
     "vim.vimrc.enable": true,
@@ -25,5 +29,6 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
-    }
+    },
+    "julia.symbolCacheDownload": true
 }

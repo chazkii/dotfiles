@@ -1,4 +1,5 @@
 channels:
+  - pytorch-nightly
   - conda-forge
   - defaults
-channel_priority: strict
+channel_priority: disabled

@@ -1,0 +1,1 @@
+{"title":"Apple Photo shortcuts for asset management 2","rules":[{"description":"'a' to add to last album","manipulators":[{"type":"basic","from":{"key_code":"a"},"conditions":[{"type":"frontmost_application_if","description":"Only for Apple Photos","bundle_identifiers":["com.apple.photos.library"]}],"to":[{"key_code":"a","modifiers":["command","left_control"]}]}]}]}
