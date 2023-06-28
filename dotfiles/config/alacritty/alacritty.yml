@@ -101,8 +101,6 @@ font:
   offset:
     y: 2
 
-alt_send_esc: true
-
 key_bindings:
   - { key: Comma,     mods: Command,      command:
       {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
