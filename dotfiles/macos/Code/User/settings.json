@@ -3,7 +3,7 @@
     "files.autoSave": "afterDelay",
     "editor.fontFamily": "Hack Nerd Font, Monaco, 'Courier New', monospace",
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "julia.executablePath": "/Applications/Julia-1.7.app/Contents/Resources/julia/bin//julia",
     "terminal.integrated.commandsToSkipShell": [
@@ -30,5 +30,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "julia.symbolCacheDownload": true
+    "julia.symbolCacheDownload": true,
+    "security.workspace.trust.untrustedFiles": "open"
 }

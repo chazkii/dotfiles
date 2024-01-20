@@ -64,8 +64,6 @@ colors:
       cyan: '#6d96a5'
       white: '#aeb3bb'
 
-colors: *nord
-
 window:
   startup_mode: Maximized
   dynamic_title: true

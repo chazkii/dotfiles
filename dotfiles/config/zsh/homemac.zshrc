@@ -5,40 +5,41 @@ if [[ `uname -m` == 'arm64' ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-        else
-            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
+    # __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    # if [ $? -eq 0 ]; then
+    #     eval "$__conda_setup"
+    # else
+    #     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+    #         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    #     else
+    #         export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    #     fi
+    # fi
+    # unset __conda_setup
 # <<< conda initialize <<<
 elif [[ `uname -m` == 'x86_64' ]]; then
     echo "Running under Rosetta 2"
     export PYENV_ROOT="$HOME/.pyenv_x86"
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-            . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-        else
-            export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
+    # __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    # if [ $? -eq 0 ]; then
+    #     eval "$__conda_setup"
+    # else
+    #     if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+    #         . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    #     else
+    #         export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    #     fi
+    # fi
+    # unset __conda_setup
 else
     echo "not a recognised arch! $(uname -m)"
 fi
 
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Mac only

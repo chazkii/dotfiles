@@ -51,6 +51,7 @@ setopt nomenucomplete
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+alias k=kubectl
 source $ZDOTDIR/homemac.zshrc
 
 export PATH="$HOME/.poetry/bin:$PATH"

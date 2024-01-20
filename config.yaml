@@ -3,9 +3,6 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  f_macos_inkdrop_keymap.cson:
-    src: macos/inkdrop/keymap.cson
-    dst: ~/Library/Application Support/inkdrop/keymap.cson
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
@@ -106,7 +103,6 @@ dotfiles:
 profiles:
   Charlies-MacBook-Pro.local:
     dotfiles:
-    - f_macos_inkdrop_keymap.cson
     - d_nvim
     - d_alacritty
     - f_editorconfig
